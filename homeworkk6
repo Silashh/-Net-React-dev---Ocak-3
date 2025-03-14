@@ -1,0 +1,88 @@
+1-) Koşullu İfadeler (if-else) Ne İşe Yarar? Gerçek Hayattan Bir Örnek
+if-else, programın belirli bir koşula göre farklı işlemler yapmasını sağlar.
+Eğer belirtilen şart sağlanıyorsa (if), bir kod bloğu çalıştırılır; sağlanmıyorsa (else), alternatif bir kod bloğu devreye girer.
+Gerçek Hayattan Bir Örnek:
+
+Bir trafik ışığında, sürücü ışığın rengine göre hareket eder:
+
+Eğer ışık yeşilse, araç devam eder.
+Eğer ışık sarıysa, araç yavaşlar ve durmaya hazırlanır.
+Eğer ışık kırmızıysa, araç durur.
+Bu senaryoyu C# ile yazarsak:
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Trafik ışığının rengini girin (yeşil/sarı/kırmızı): ");
+        string isik = Console.ReadLine().ToLower(); 
+      
+
+        if (isik == "yeşil")
+        {
+            Console.WriteLine("Devam edebilirsiniz.");
+        }
+        else if (isik == "sarı")
+        {
+            Console.WriteLine("Yavaşlayın ve durmaya hazırlanın.");
+        }
+        else if (isik == "kırmızı")
+        {
+            Console.WriteLine("Durmalısınız!");
+        }
+        else
+        {
+            Console.WriteLine("Geçersiz giriş! Lütfen yeşil, sarı veya kırmızı girin.");
+        }
+    }
+}
+
+2-) Kullanıcıdan Bir Sayı Alıp Tek mi Çift mi Olduğunu Bulan C# Programı
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number % 2 == 0)
+        {
+            Console.WriteLine($"{number} is an even number.");
+        }
+        else
+        {
+            Console.WriteLine($"{number} is an odd number.");
+        }
+    }
+}
+3-) Girilen Bir Sayının Pozitif, Negatif veya Sıfır Olup Olmadığını Belirleyen C# Programı
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number > 0)
+        {
+            Console.WriteLine($"{number} is positive.");
+        }
+        else if (number < 0)
+        {
+            Console.WriteLine($"{number} is negative.");
+        }
+        else
+        {
+            Console.WriteLine("The entered number is zero.");
+        }
+    }
+}
+
